@@ -1,0 +1,18 @@
+<h1>All Posts</h1>
+  
+  <div>
+    <ul>
+      <% @posts.each do |post| %>
+      <li><a href='/post/<%= post.id %>'>Name: <%= post.name %> Content: <%= post.content %>
+        <% if post.tags %>
+          Tags: <%= tags = post.tags %>
+          <% tags.each do |tag|%>
+            <%= tag.name %>
+          <% end %>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+<h4><a href="/"> Home </a></h4>

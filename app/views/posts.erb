@@ -1,0 +1,21 @@
+
+<h1>Your Post</h1>
+  <div>
+    <p>
+      <ul>
+          <li>Post Name: <%= @this_post.name %> Post Content: <%= @this_post.content %> </li>
+  
+      </ul>
+    </P>
+  </div>
+     
+<form action="/posts/<%=@this_post.id%>/delete" method="POST">
+  <input type="submit" value="Delete Post">
+</form>
+
+<h4><a href='/post/<%= @this_post.id %>/edit'>Edit Post</a></h4>        
+
+<h4><a href="/"> Home </a></h4>
+<h4><a href="/create_post">Create a Post</a></h4>
+
+
